@@ -5,7 +5,7 @@ const form = document.forms['contact-form'];
 function getFormattedDateTime() {
     const now = new Date();
     const year = now.getFullYear();
-    const month = String(now.getMonth() + 1).padStart(2, '0'); // Month is 0-indexed
+    const month = String(now.getMonth() + 1).padStart(2, '0');
     const day = String(now.getDate()).padStart(2, '0');
     const hours = String(now.getHours()).padStart(2, '0');
     const minutes = String(now.getMinutes()).padStart(2, '0');
@@ -18,9 +18,9 @@ function calculateTimeDifference(checkinTime, checkoutTime) {
     const checkinDate = new Date(checkinTime);
     const checkoutDate = new Date(checkoutTime);
 
-    const diffMs = checkoutDate - checkinDate; // Difference in milliseconds
-    const diffHours = Math.floor(diffMs / (1000 * 60 * 60)); // Convert to hours
-    const diffMinutes = Math.floor((diffMs % (1000 * 60 * 60)) / (1000 * 60)); // Convert to minutes
+    const diffMs = checkoutDate - checkinDate;
+    const diffHours = Math.floor(diffMs / (1000 * 60 * 60)); 
+    const diffMinutes = Math.floor((diffMs % (1000 * 60 * 60)) / (1000 * 60)); 
 
     return `${diffHours}h ${diffMinutes}m`;
 }
@@ -31,7 +31,7 @@ function validatePhoneNumber(phone) {
 }
 
 function validateName(name) {
-    const nameRegex = /^[A-Za-zÀ-ÿ]/; // Regex to ensure name starts with a letter
+    const nameRegex = /^[A-Za-zÀ-ÿ]/; 
     return nameRegex.test(name);
 }
 
@@ -87,7 +87,7 @@ form.addEventListener('submit', e => {
         const checkinTime = getFormattedDateTime();
         formData.append('Thời Gian Checkin', checkinTime);
         sessionStorage.setItem(checkinKey, checkinTime);
-        sessionStorage.removeItem(checkoutKey); // Ensure checkout is reset
+        sessionStorage.removeItem(checkoutKey);
 
         fetch(scriptURL, { method: 'POST', body: formData })
             .then(response => {
