@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('image/1b86b7dc089e5472d830118ad363467a.jpg'); /* Đảm bảo đường dẫn ảnh đúng */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    font-size: 20px;
+    display: flex; /* Sử dụng flexbox để căn giữa container */
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 50px;
+    width: 450px;
+    height: 330px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.788); /* Adding a box shadow for the floating effect */
+}
+
+.input-group {
+    margin-bottom: 15px; /* Khoảng cách giữa các nhóm input */
+}
+
+label {
+    display: block; /* Đặt label trên một dòng riêng */
+    margin-bottom: 5px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Bao gồm padding và border trong chiều rộng */
+    padding: 5px; /* Điều chỉnh padding để thay đổi kích thước ô input */
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px 30px; /* Điều chỉnh padding để thay đổi kích thước nút */
+}
+
+#checkin {
+    background-color: #008000; /* Màu xanh lá cây */
+    color: white;
+}
+
+#checkout {
+    background-color: #ff0000; /* Màu đỏ */
+    color: white;
+}
+h2 {
+    text-align: center; /* Căn giữa nội dung của h2 */
+}
+.button-container {
+    text-align: center; /* Căn giữa các nút bên trong div */
+}
+/* ... (các thuộc tính CSS khác) ... */
+
+.checkbox-group {
+    display: flex; /* Sử dụng flexbox để căn chỉnh checkbox và label */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    margin-bottom: 15px; /* Khoảng cách dưới checkbox */
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 10px; /* Khoảng cách giữa checkbox và label */
+}
+.Copyright {
+    font-weight: bold; /* Makes the text bold */
+    font-family: 'Arial', sans-serif; /* Uses a rounded sans-serif font */
+    font-size: 13px;
+    text-align: right;
+    margin-top: 30px;
+}
+/*Giao dien Mobile*/
+@media (max-width: 768px) {
+    .container {
+        width: 67%; /* Hoặc một giá trị cụ thể khác, ví dụ: 300px */
+        margin: 0 auto; /* Căn giữa container */
+        display: flex; /* Sử dụng flexbox */
+        flex-direction: column; /* Xếp chồng các phần tử theo chiều dọc */
+        align-items: center; /* Căn giữa các phần tử theo chiều ngang */
+    }
+
+    /* Điều chỉnh CSS cho nút Checkin và Checkout */
+    button {
+        margin-top: 5px; /* Khoảng cách giữa các nút */
+    }
+
+    .Copyright {
+        position: fixed; /* Đặt vị trí cố định */
+        bottom: 0; /* Đặt ở phía dưới cùng của trình duyệt */
+        left: 50%; /* Đặt ở phía bên trái 50% chiều rộng của màn hình */
+        transform: translateX(-50%); /* Dịch chuyển phần tử đi lùi 50% chiều rộng của chính nó */
+        width: 100%; /* Chiều rộng là 100% của trình duyệt */
+        text-align: center; /* Căn giữa nội dung */
+        color: white; /* Màu chữ trắng */
+        background-color: rgba(0, 0, 0, 0.5); /* Màu nền là một màu đen có độ mờ để chữ nổi lên */
+        padding: 10px 0; /* Padding cho phần nội dung */
+    }
+}
+
+
+
+
