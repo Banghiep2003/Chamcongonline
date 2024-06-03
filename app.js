@@ -153,6 +153,6 @@ document.getElementById('checkout').addEventListener('click', () => {
                 alert("Có lỗi xảy ra, vui lòng thử lại.");
             });
     } else {
-        alert("No previous checkin found for this user today.");
+        alert("Hôm nay bạn chưa Checkin!.");
     }
 });
